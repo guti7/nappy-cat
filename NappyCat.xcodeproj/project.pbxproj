@@ -15,6 +15,11 @@
 		44EC3F322AA186F400E0B2E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44EC3F302AA186F400E0B2E2 /* Main.storyboard */; };
 		44EC3F342AA186F600E0B2E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44EC3F332AA186F600E0B2E2 /* Assets.xcassets */; };
 		44EC3F372AA186F600E0B2E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44EC3F352AA186F600E0B2E2 /* LaunchScreen.storyboard */; };
+		44EC3F432AA1F25800E0B2E2 /* mrreow.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 44EC3F3E2AA1F25800E0B2E2 /* mrreow.mp3 */; };
+		44EC3F442AA1F25800E0B2E2 /* pop.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 44EC3F3F2AA1F25800E0B2E2 /* pop.mp3 */; };
+		44EC3F452AA1F25800E0B2E2 /* win.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 44EC3F402AA1F25800E0B2E2 /* win.mp3 */; };
+		44EC3F462AA1F25800E0B2E2 /* lose.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 44EC3F412AA1F25800E0B2E2 /* lose.mp3 */; };
+		44EC3F472AA1F25800E0B2E2 /* backgroundMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 44EC3F422AA1F25800E0B2E2 /* backgroundMusic.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +32,11 @@
 		44EC3F312AA186F400E0B2E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		44EC3F332AA186F600E0B2E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		44EC3F362AA186F600E0B2E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		44EC3F3E2AA1F25800E0B2E2 /* mrreow.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = mrreow.mp3; sourceTree = "<group>"; };
+		44EC3F3F2AA1F25800E0B2E2 /* pop.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pop.mp3; sourceTree = "<group>"; };
+		44EC3F402AA1F25800E0B2E2 /* win.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = win.mp3; sourceTree = "<group>"; };
+		44EC3F412AA1F25800E0B2E2 /* lose.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = lose.mp3; sourceTree = "<group>"; };
+		44EC3F422AA1F25800E0B2E2 /* backgroundMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = backgroundMusic.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,8 +77,21 @@
 				44EC3F302AA186F400E0B2E2 /* Main.storyboard */,
 				44EC3F332AA186F600E0B2E2 /* Assets.xcassets */,
 				44EC3F352AA186F600E0B2E2 /* LaunchScreen.storyboard */,
+				44EC3F3D2AA1F25800E0B2E2 /* Sounds */,
 			);
 			path = NappyCat;
+			sourceTree = "<group>";
+		};
+		44EC3F3D2AA1F25800E0B2E2 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				44EC3F3E2AA1F25800E0B2E2 /* mrreow.mp3 */,
+				44EC3F3F2AA1F25800E0B2E2 /* pop.mp3 */,
+				44EC3F402AA1F25800E0B2E2 /* win.mp3 */,
+				44EC3F412AA1F25800E0B2E2 /* lose.mp3 */,
+				44EC3F422AA1F25800E0B2E2 /* backgroundMusic.mp3 */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,8 +154,13 @@
 			files = (
 				44EC3F322AA186F400E0B2E2 /* Main.storyboard in Resources */,
 				44EC3F292AA186F400E0B2E2 /* GameScene.sks in Resources */,
+				44EC3F462AA1F25800E0B2E2 /* lose.mp3 in Resources */,
 				44EC3F342AA186F600E0B2E2 /* Assets.xcassets in Resources */,
+				44EC3F452AA1F25800E0B2E2 /* win.mp3 in Resources */,
 				44EC3F372AA186F600E0B2E2 /* LaunchScreen.storyboard in Resources */,
+				44EC3F432AA1F25800E0B2E2 /* mrreow.mp3 in Resources */,
+				44EC3F442AA1F25800E0B2E2 /* pop.mp3 in Resources */,
+				44EC3F472AA1F25800E0B2E2 /* backgroundMusic.mp3 in Resources */,
 				44EC3F2B2AA186F400E0B2E2 /* Actions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
