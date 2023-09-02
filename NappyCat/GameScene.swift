@@ -14,6 +14,9 @@ class GameScene: SKScene {
     private var spinnyNode : SKShapeNode?
     
     override func didMove(to view: SKView) {
+        // Get animations started
+        self.isPaused = true
+        self.isPaused = false
         
         // Get label node from scene and store it for use later
         self.label = self.childNode(withName: "//helloLabel") as? SKLabelNode
