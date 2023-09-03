@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		44B999992AA4CC7C002D5E77 /* CatCurl.sks in Resources */ = {isa = PBXBuildFile; fileRef = 44B999982AA4CC7C002D5E77 /* CatCurl.sks */; };
+		44B9999B2AA4D109002D5E77 /* CatWakeUp.sks in Resources */ = {isa = PBXBuildFile; fileRef = 44B9999A2AA4D109002D5E77 /* CatWakeUp.sks */; };
 		44EC3F272AA186F400E0B2E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44EC3F262AA186F400E0B2E2 /* AppDelegate.swift */; };
 		44EC3F292AA186F400E0B2E2 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 44EC3F282AA186F400E0B2E2 /* GameScene.sks */; };
 		44EC3F2B2AA186F400E0B2E2 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 44EC3F2A2AA186F400E0B2E2 /* Actions.sks */; };
@@ -26,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		44B999982AA4CC7C002D5E77 /* CatCurl.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = CatCurl.sks; sourceTree = "<group>"; };
+		44B9999A2AA4D109002D5E77 /* CatWakeUp.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = CatWakeUp.sks; sourceTree = "<group>"; };
 		44EC3F232AA186F400E0B2E2 /* NappyCat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NappyCat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44EC3F262AA186F400E0B2E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		44EC3F282AA186F400E0B2E2 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 				44EC3F282AA186F400E0B2E2 /* GameScene.sks */,
 				44EC3F492AA22A6D00E0B2E2 /* Cat.sks */,
 				44B999982AA4CC7C002D5E77 /* CatCurl.sks */,
+				44B9999A2AA4D109002D5E77 /* CatWakeUp.sks */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -170,6 +173,7 @@
 				44EC3F292AA186F400E0B2E2 /* GameScene.sks in Resources */,
 				44EC3F462AA1F25800E0B2E2 /* lose.mp3 in Resources */,
 				44EC3F342AA186F600E0B2E2 /* Assets.xcassets in Resources */,
+				44B9999B2AA4D109002D5E77 /* CatWakeUp.sks in Resources */,
 				44B999992AA4CC7C002D5E77 /* CatCurl.sks in Resources */,
 				44EC3F452AA1F25800E0B2E2 /* win.mp3 in Resources */,
 				44EC3F372AA186F600E0B2E2 /* LaunchScreen.storyboard in Resources */,
