@@ -13,6 +13,10 @@ protocol EventListenerNode {
 }
 
 class GameScene: SKScene {
+    // Properties
+    var bedNode: BedNode!
+    var catNode: CatNode!
+    
     override func didMove(to view: SKView) {
         // Get animations started
         self.isPaused = true
@@ -35,5 +39,13 @@ class GameScene: SKScene {
                 eventListenerNode.didMoveToScene()
             }
         }
+        
+        bedNode = (childNode(withName: "bed") as! BedNode)
+        // Recursively search for the cat body node
+        catNode = (childNode(withName: "//cat_body") as! CatNode)
+        
+        // Now you have a reference for each sprite
+        bedNode.setScale(1.5)
+        catNode.setScale(1.5)
     }
 }
