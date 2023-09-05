@@ -44,8 +44,5 @@ class GameScene: SKScene {
         // Recursively search for the cat body node
         catNode = (childNode(withName: "//cat_body") as! CatNode)
         
-        // Now you have a reference for each sprite
-        bedNode.setScale(1.5)
-        catNode.setScale(1.5)
     }
 }
