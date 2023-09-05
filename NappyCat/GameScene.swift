@@ -7,8 +7,12 @@
 
 import SpriteKit
 
+// Protocol for all nodes that will listen to this event
+protocol EventListenerNode {
+    func didMoveToScene()
+}
+
 class GameScene: SKScene {
-        
     override func didMove(to view: SKView) {
         // Get animations started
         self.isPaused = true
@@ -26,5 +30,10 @@ class GameScene: SKScene {
         
         physicsBody = SKPhysicsBody(edgeLoopFrom: playableRect)
         
+        enumerateChildNodes(withName: "//*") { node, _ in
+            if let eventListenerNode = node as? EventListenerNode {
+                eventListenerNode.didMoveToScene()
+            }
+        }
     }
 }
