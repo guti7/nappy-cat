@@ -19,13 +19,14 @@ protocol InteractiveNode {
 
 // Physics body collision categories
 struct PhysicsCategory {
-    static let None:  UInt32 = 0     // 0 - 0000
-    static let Cat:   UInt32 = 0b1   // 1 - 0001
-    static let Block: UInt32 = 0b10  // 2 - 0010
-    static let Bed:   UInt32 = 0b100 // 4 - 0100
+    static let None:  UInt32 = 0      // 0 - 0000
+    static let Cat:   UInt32 = 0b1    // 1 - 0001
+    static let Block: UInt32 = 0b10   // 2 - 0010
+    static let Bed:   UInt32 = 0b100  // 4 - 0100
+    static let Edge:  UInt32 = 0b1000 // 8 - 1000
 }
 
-class GameScene: SKScene {
+class GameScene: SKScene, SKPhysicsContactDelegate {
     // Properties
     var bedNode: BedNode!
     var catNode: CatNode!
@@ -49,6 +50,8 @@ class GameScene: SKScene {
                                   height: size.height - playableMargin * 2)
         
         physicsBody = SKPhysicsBody(edgeLoopFrom: playableRect)
+        physicsWorld.contactDelegate = self
+        physicsBody!.categoryBitMask = PhysicsCategory.Edge
         
         enumerateChildNodes(withName: "//*") { node, _ in
             if let eventListenerNode = node as? EventListenerNode {

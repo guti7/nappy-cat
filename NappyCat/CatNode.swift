@@ -17,6 +17,6 @@ class CatNode: SKSpriteNode, EventListenerNode {
         
         // Set bit masks
         parent!.physicsBody!.categoryBitMask = PhysicsCategory.Cat
-        parent!.physicsBody!.collisionBitMask = PhysicsCategory.Block
+        parent!.physicsBody!.collisionBitMask = PhysicsCategory.Block | PhysicsCategory.Edge
     }
 }
