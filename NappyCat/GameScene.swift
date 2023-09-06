@@ -12,6 +12,14 @@ protocol EventListenerNode {
     func didMoveToScene()
 }
 
+// Physics body collision categories
+struct PhysicsCategory {
+    static let None:  UInt32 = 0     // 0 - 0000
+    static let Cat:   UInt32 = 0b1   // 1 - 0001
+    static let Block: UInt32 = 0b10  // 2 - 0010
+    static let Bed:   UInt32 = 0b100 // 4 - 0100
+}
+
 class GameScene: SKScene {
     // Properties
     var bedNode: BedNode!
