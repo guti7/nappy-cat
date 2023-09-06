@@ -18,5 +18,7 @@ class CatNode: SKSpriteNode, EventListenerNode {
         // Set bit masks
         parent!.physicsBody!.categoryBitMask = PhysicsCategory.Cat
         parent!.physicsBody!.collisionBitMask = PhysicsCategory.Block | PhysicsCategory.Edge
+        // Receive a callback when the cat makes contact
+        parent!.physicsBody!.contactTestBitMask = PhysicsCategory.Bed | PhysicsCategory.Edge
     }
 }

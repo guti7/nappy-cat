@@ -64,4 +64,18 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         catNode = (childNode(withName: "//cat_body") as! CatNode)
         
     }
+    
+    // Handle contact delegate callbacks
+    func didBegin(_ contact: SKPhysicsContact) {
+        // bit wise OR determines the collision
+        let collision = contact.bodyA.categoryBitMask | contact.bodyB.categoryBitMask
+        
+        // Collision is between Cat and Bed
+        if collision == PhysicsCategory.Bed | PhysicsCategory.Cat {
+            print("Cat in bed: Success")
+        // Collision is between Cat and Edge
+        } else if  collision == PhysicsCategory.Cat | PhysicsCategory.Edge {
+            print("Cat on ground: Failure")
+        }
+    }
 }
