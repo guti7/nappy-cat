@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		448F71532AA819DF009A613D /* SKTAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448F71522AA819DF009A613D /* SKTAudio.swift */; };
+		448F71552AA8B35F009A613D /* BlockNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448F71542AA8B35F009A613D /* BlockNode.swift */; };
 		44B999992AA4CC7C002D5E77 /* CatCurl.sks in Resources */ = {isa = PBXBuildFile; fileRef = 44B999982AA4CC7C002D5E77 /* CatCurl.sks */; };
 		44B9999B2AA4D109002D5E77 /* CatWakeUp.sks in Resources */ = {isa = PBXBuildFile; fileRef = 44B9999A2AA4D109002D5E77 /* CatWakeUp.sks */; };
 		44EC3F272AA186F400E0B2E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44EC3F262AA186F400E0B2E2 /* AppDelegate.swift */; };
@@ -30,6 +31,7 @@
 
 /* Begin PBXFileReference section */
 		448F71522AA819DF009A613D /* SKTAudio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKTAudio.swift; sourceTree = "<group>"; };
+		448F71542AA8B35F009A613D /* BlockNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockNode.swift; sourceTree = "<group>"; };
 		44B999982AA4CC7C002D5E77 /* CatCurl.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = CatCurl.sks; sourceTree = "<group>"; };
 		44B9999A2AA4D109002D5E77 /* CatWakeUp.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = CatWakeUp.sks; sourceTree = "<group>"; };
 		44EC3F232AA186F400E0B2E2 /* NappyCat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NappyCat.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,6 +96,7 @@
 				44EC3F262AA186F400E0B2E2 /* AppDelegate.swift */,
 				44EC3F2A2AA186F400E0B2E2 /* Actions.sks */,
 				44EC3F2C2AA186F400E0B2E2 /* GameScene.swift */,
+				448F71542AA8B35F009A613D /* BlockNode.swift */,
 				44F4E5B12AA6A9C000D0561F /* BedNode.swift */,
 				44F4E5B32AA6B23100D0561F /* CatNode.swift */,
 				44EC3F2E2AA186F400E0B2E2 /* GameViewController.swift */,
@@ -213,6 +216,7 @@
 				44F4E5B42AA6B23100D0561F /* CatNode.swift in Sources */,
 				44F4E5B22AA6A9C000D0561F /* BedNode.swift in Sources */,
 				448F71532AA819DF009A613D /* SKTAudio.swift in Sources */,
+				448F71552AA8B35F009A613D /* BlockNode.swift in Sources */,
 				44EC3F2F2AA186F400E0B2E2 /* GameViewController.swift in Sources */,
 				44EC3F272AA186F400E0B2E2 /* AppDelegate.swift in Sources */,
 			);

@@ -12,6 +12,11 @@ protocol EventListenerNode {
     func didMoveToScene()
 }
 
+// Protocol to distinguish between nodes
+protocol InteractiveNode {
+    func interact()
+}
+
 // Physics body collision categories
 struct PhysicsCategory {
     static let None:  UInt32 = 0     // 0 - 0000
