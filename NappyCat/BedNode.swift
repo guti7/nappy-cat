@@ -16,5 +16,8 @@ class BedNode: SKSpriteNode, EventListenerNode {
         physicsBody = SKPhysicsBody(rectangleOf: bedBodySize)
         // make the body static because you don't want it to move
         physicsBody!.isDynamic = false
+        // Set category and collision bitmask
+        physicsBody!.categoryBitMask = PhysicsCategory.Bed
+        physicsBody!.collisionBitMask = PhysicsCategory.None
     }
 }
