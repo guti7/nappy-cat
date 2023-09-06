@@ -15,6 +15,13 @@ class BlockNode: SKSpriteNode, EventListenerNode, InteractiveNode {
     
     func interact() {
         isUserInteractionEnabled = false
+        
+        // Begin action sequence to destroy the block node
+        run(SKAction.sequence([
+            SKAction.playSoundFileNamed("pop.mp3", waitForCompletion: false),
+            SKAction.scale(to: 0.8, duration: 0.1),
+            SKAction.removeFromParent()
+        ]))
     }
     
     // Respond to taps on the block
