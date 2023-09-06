@@ -23,5 +23,11 @@ class MessageNode: SKLabelNode {
         front.position  = CGPoint(x: -2, y: -2)
         addChild(front)
         
+        // Animate the message with physics effects
+        physicsBody = SKPhysicsBody(circleOfRadius: 10)
+        physicsBody!.categoryBitMask = PhysicsCategory.Label
+        physicsBody!.collisionBitMask = PhysicsCategory.Edge
+        physicsBody!.restitution = 0.7
+        
     }
 }
