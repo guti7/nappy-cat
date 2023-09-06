@@ -14,5 +14,9 @@ class CatNode: SKSpriteNode, EventListenerNode {
         
         let catBodyTexture = SKTexture(imageNamed: "cat_body_outline")
         parent!.physicsBody = SKPhysicsBody(texture: catBodyTexture, size: catBodyTexture.size())
+        
+        // Set bit masks
+        parent!.physicsBody!.categoryBitMask = PhysicsCategory.Cat
+        parent!.physicsBody!.collisionBitMask = PhysicsCategory.Block
     }
 }
