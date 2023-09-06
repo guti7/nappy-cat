@@ -19,11 +19,12 @@ protocol InteractiveNode {
 
 // Physics body collision categories
 struct PhysicsCategory {
-    static let None:  UInt32 = 0      // 0 - 0000
-    static let Cat:   UInt32 = 0b1    // 1 - 0001
-    static let Block: UInt32 = 0b10   // 2 - 0010
-    static let Bed:   UInt32 = 0b100  // 4 - 0100
-    static let Edge:  UInt32 = 0b1000 // 8 - 1000
+    static let None:  UInt32 = 0        //  0 -  0000
+    static let Cat:   UInt32 = 0b1      //  1 -  0001
+    static let Block: UInt32 = 0b10     //  2 -  0010
+    static let Bed:   UInt32 = 0b100    //  4 -  0100
+    static let Edge:  UInt32 = 0b1000   //  8 -  1000
+    static let Label: UInt32 = 0b10000  // 16 - 10000
 }
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
@@ -73,9 +74,18 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         // Collision is between Cat and Bed
         if collision == PhysicsCategory.Bed | PhysicsCategory.Cat {
             print("Cat in bed: Success")
+            inGameMessage(text: "Cat in bed: Success")
         // Collision is between Cat and Edge
         } else if  collision == PhysicsCategory.Cat | PhysicsCategory.Edge {
             print("Cat on ground: Failure")
+            inGameMessage(text: "Cat on ground: Failure")
         }
+    }
+    
+    // Display in-game message
+    func inGameMessage(text: String) {
+        let message = MessageNode(message: text)
+        message.position = CGPoint(x: frame.midX, y: frame.midY)
+        addChild(message)
     }
 }
