@@ -18,6 +18,9 @@ class GameScene: SKScene {
     var catNode: CatNode!
     
     override func didMove(to view: SKView) {
+        // Add background music
+        SKTAudio.sharedInstance().playBackgroundMusic("backgroundMusic.mp3")
+        
         // Get animations started
         self.isPaused = true
         self.isPaused = false
