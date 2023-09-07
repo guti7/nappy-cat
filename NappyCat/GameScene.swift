@@ -78,7 +78,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         // Collision is between Cat and Edge
         } else if  collision == PhysicsCategory.Cat | PhysicsCategory.Edge {
             print("Cat on ground: Failure")
-            inGameMessage(text: "Cat on ground: Failure")
+            lose()
         }
     }
     
@@ -87,5 +87,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         let message = MessageNode(message: text)
         message.position = CGPoint(x: frame.midX, y: frame.midY)
         addChild(message)
+    }
+    
+    // Losing scenario
+    func lose() {
+        SKTAudio.sharedInstance().pauseBackgroundMusic()
+        inGameMessage(text: "Try Again...")
     }
 }
