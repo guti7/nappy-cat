@@ -92,6 +92,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     // Losing scenario
     func lose() {
         SKTAudio.sharedInstance().pauseBackgroundMusic()
+        SKTAudio.sharedInstance().playSoundEffect("lose.mp3")
         inGameMessage(text: "Try Again...")
     }
 }
