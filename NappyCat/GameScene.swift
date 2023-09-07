@@ -31,6 +31,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     // Properties
     var bedNode: BedNode!
     var catNode: CatNode!
+    var playable = true
     
     override func didMove(to view: SKView) {
         // Add background music
@@ -68,6 +69,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     // Handle contact delegate callbacks
     func didBegin(_ contact: SKPhysicsContact) {
+        // Game is inactive
+        if !playable {
+            return
+        }
+        
         // bit wise OR determines the collision
         let collision = contact.bodyA.categoryBitMask | contact.bodyB.categoryBitMask
         
@@ -91,6 +97,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     // Losing scenario
     func lose() {
+        playable = false
         SKTAudio.sharedInstance().pauseBackgroundMusic()
         SKTAudio.sharedInstance().playSoundEffect("lose.mp3")
         inGameMessage(text: "Try Again...")
