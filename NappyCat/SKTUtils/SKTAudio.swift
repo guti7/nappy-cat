@@ -69,7 +69,7 @@ public class SKTAudio {
         }
         
         if let player = soundEffectPlayer {
-            player.numberOfLoops = 4
+            player.numberOfLoops = 0
             player.prepareToPlay()
             player.play()
         } else {

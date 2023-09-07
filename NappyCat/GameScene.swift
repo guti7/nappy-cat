@@ -95,11 +95,20 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         addChild(message)
     }
     
+    // Restart current game level
+    func newGame() {
+        // TODO: See GameViewController for other initial game set up options
+        let scene = GameScene(fileNamed: "GameScene")
+        scene!.scaleMode = scaleMode
+        view!.presentScene(scene)
+    }
+    
     // Losing scenario
     func lose() {
         playable = false
         SKTAudio.sharedInstance().pauseBackgroundMusic()
         SKTAudio.sharedInstance().playSoundEffect("lose.mp3")
         inGameMessage(text: "Try Again...")
+        run(SKAction.afterDelay(5, runBlock: newGame))
     }
 }
