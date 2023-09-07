@@ -21,4 +21,24 @@ class CatNode: SKSpriteNode, EventListenerNode {
         // Receive a callback when the cat makes contact
         parent!.physicsBody!.contactTestBitMask = PhysicsCategory.Bed | PhysicsCategory.Edge
     }
+    
+    // wake-up animation
+    func wakeUp() {
+        
+        // Remove the cat "parts" from the body
+        for child in children {
+            child.removeFromParent()
+        }
+        
+        // Reset cat to an empty node
+        texture = nil
+        color = SKColor.clear
+        
+        // load the cat wake up scene and get the cat awake sprite node
+        let catAwake = SKSpriteNode(fileNamed: "CatWakeUp")!.childNode(withName: "cat_awake")!
+        
+        // Change the parent from the scene node to the cat node
+        catAwake.move(toParent: self)
+        catAwake.position = CGPoint(x: -30, y: 100)
+    }
 }

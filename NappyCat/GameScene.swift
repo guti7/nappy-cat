@@ -110,5 +110,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         SKTAudio.sharedInstance().playSoundEffect("lose.mp3")
         inGameMessage(text: "Try Again...")
         run(SKAction.afterDelay(5, runBlock: newGame))
+        catNode.wakeUp()
     }
 }
