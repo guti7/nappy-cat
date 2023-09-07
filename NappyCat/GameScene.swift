@@ -80,7 +80,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         // Collision is between Cat and Bed
         if collision == PhysicsCategory.Bed | PhysicsCategory.Cat {
             print("Cat in bed: Success")
-            inGameMessage(text: "Cat in bed: Success")
+            win()
         // Collision is between Cat and Edge
         } else if  collision == PhysicsCategory.Cat | PhysicsCategory.Edge {
             print("Cat on ground: Failure")
@@ -111,5 +111,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         inGameMessage(text: "Try Again...")
         run(SKAction.afterDelay(5, runBlock: newGame))
         catNode.wakeUp()
+    }
+    
+    // Winning scenario
+    func win() {
+        playable = false
+        SKTAudio.sharedInstance().pauseBackgroundMusic()
+        SKTAudio.sharedInstance().playSoundEffect("win.mp3")
+        inGameMessage(text: "Nice job!")
+        run(SKAction.afterDelay(5, runBlock: newGame))
     }
 }
