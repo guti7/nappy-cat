@@ -34,8 +34,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var playable = true
     
     override func didMove(to view: SKView) {
+        // TODO: Uncomment once testing is done
         // Add background music
-        SKTAudio.sharedInstance().playBackgroundMusic("backgroundMusic.mp3")
+//        SKTAudio.sharedInstance().playBackgroundMusic("backgroundMusic.mp3")
         
         // Get animations started
         self.isPaused = true
@@ -119,6 +120,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         SKTAudio.sharedInstance().pauseBackgroundMusic()
         SKTAudio.sharedInstance().playSoundEffect("win.mp3")
         inGameMessage(text: "Nice job!")
-        run(SKAction.afterDelay(5, runBlock: newGame))
+        run(SKAction.afterDelay(3, runBlock: newGame))
+        catNode.curlAt(scenePoint: bedNode.position)
     }
 }
