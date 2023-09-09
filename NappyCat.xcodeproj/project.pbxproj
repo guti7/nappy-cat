@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4481CA412AACFDE1009AFD58 /* CGFloat+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4481CA402AACFDE1009AFD58 /* CGFloat+Extensions.swift */; };
 		448F71532AA819DF009A613D /* SKTAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448F71522AA819DF009A613D /* SKTAudio.swift */; };
 		448F71552AA8B35F009A613D /* BlockNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448F71542AA8B35F009A613D /* BlockNode.swift */; };
 		448F71572AA91588009A613D /* MessageNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448F71562AA91588009A613D /* MessageNode.swift */; };
@@ -32,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4481CA402AACFDE1009AFD58 /* CGFloat+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extensions.swift"; sourceTree = "<group>"; };
 		448F71522AA819DF009A613D /* SKTAudio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKTAudio.swift; sourceTree = "<group>"; };
 		448F71542AA8B35F009A613D /* BlockNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockNode.swift; sourceTree = "<group>"; };
 		448F71562AA91588009A613D /* MessageNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageNode.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 			children = (
 				448F71522AA819DF009A613D /* SKTAudio.swift */,
 				448F71582AA977F7009A613D /* SKAction+Extensions.swift */,
+				4481CA402AACFDE1009AFD58 /* CGFloat+Extensions.swift */,
 			);
 			path = SKTUtils;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 				44F4E5B22AA6A9C000D0561F /* BedNode.swift in Sources */,
 				448F71532AA819DF009A613D /* SKTAudio.swift in Sources */,
 				448F71552AA8B35F009A613D /* BlockNode.swift in Sources */,
+				4481CA412AACFDE1009AFD58 /* CGFloat+Extensions.swift in Sources */,
 				44EC3F2F2AA186F400E0B2E2 /* GameViewController.swift in Sources */,
 				44EC3F272AA186F400E0B2E2 /* AppDelegate.swift in Sources */,
 				448F71572AA91588009A613D /* MessageNode.swift in Sources */,

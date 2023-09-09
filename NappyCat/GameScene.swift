@@ -68,6 +68,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
     }
     
+    // Do some work after physics are finished simulating
+    override func didSimulatePhysics() {
+        // Check if play is ongoing
+        if playable {
+            // player loses if the cat is over tilted
+            if abs(catNode.parent!.zRotation) > CGFloat(25).degreesToRadians() {
+                lose()
+            }
+        }
+    }
+    
     // Handle contact delegate callbacks
     func didBegin(_ contact: SKPhysicsContact) {
         // bit wise OR determines the collision
