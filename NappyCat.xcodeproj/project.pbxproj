@@ -70,6 +70,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4481CA422AAD364A009AFD58 /* Nodes */ = {
+			isa = PBXGroup;
+			children = (
+				448F71562AA91588009A613D /* MessageNode.swift */,
+				448F71542AA8B35F009A613D /* BlockNode.swift */,
+				44F4E5B12AA6A9C000D0561F /* BedNode.swift */,
+				44F4E5B32AA6B23100D0561F /* CatNode.swift */,
+			);
+			path = Nodes;
+			sourceTree = "<group>";
+		};
 		448F71512AA81967009A613D /* SKTUtils */ = {
 			isa = PBXGroup;
 			children = (
@@ -104,10 +115,7 @@
 				44EC3F262AA186F400E0B2E2 /* AppDelegate.swift */,
 				44EC3F2A2AA186F400E0B2E2 /* Actions.sks */,
 				44EC3F2C2AA186F400E0B2E2 /* GameScene.swift */,
-				448F71562AA91588009A613D /* MessageNode.swift */,
-				448F71542AA8B35F009A613D /* BlockNode.swift */,
-				44F4E5B12AA6A9C000D0561F /* BedNode.swift */,
-				44F4E5B32AA6B23100D0561F /* CatNode.swift */,
+				4481CA422AAD364A009AFD58 /* Nodes */,
 				44EC3F2E2AA186F400E0B2E2 /* GameViewController.swift */,
 				44EC3F302AA186F400E0B2E2 /* Main.storyboard */,
 				44EC3F332AA186F600E0B2E2 /* Assets.xcassets */,
