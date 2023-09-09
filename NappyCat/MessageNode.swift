@@ -8,7 +8,7 @@
 import SpriteKit
 
 class MessageNode: SKLabelNode {
-    var bounceCount = 0
+    private var bounceCount = 0
     
     convenience init(message: String) {
         self.init(fontNamed: "AvenirNext-Regular")
@@ -32,5 +32,14 @@ class MessageNode: SKLabelNode {
         // Receive a callback when the cat makes contact
         physicsBody!.contactTestBitMask = PhysicsCategory.Edge
         physicsBody!.restitution = 0.7
+    }
+    
+    // Track bounces remove once it bounces 4 times
+    func didBounce() {
+        // TODO: Hidden side effects - refactor?
+        bounceCount += 1
+        if bounceCount >= 4 {
+            run(SKAction.afterDelay(1.0 / Double(bounceCount), runBlock: removeFromParent))
+        }
     }
 }

@@ -73,18 +73,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         // bit wise OR determines the collision
         let collision = contact.bodyA.categoryBitMask | contact.bodyB.categoryBitMask
         
+        // Collision is between message label and Edge
+        if collision == PhysicsCategory.Label | PhysicsCategory.Edge {
+            let contactNode = contact.bodyA.categoryBitMask == PhysicsCategory.Label ? contact.bodyA.node : contact.bodyB.node
+            if let messageNode = contactNode as? MessageNode {
+                messageNode.didBounce()
+            }
+        }
+        
         // Game is inactive
         if !playable {
-            // Collision is between message label and Edge
-            if collision == PhysicsCategory.Label | PhysicsCategory.Edge {
-                if let messageNode = self.childNode(withName: "message_label") as? MessageNode{
-                    messageNode.bounceCount += 1
-                    print("Label on bounce = \(messageNode.bounceCount)")
-                    if messageNode.bounceCount >= 4 {
-                        removeInGameMessage()
-                    }
-                }
-            }
             return
         }
         
@@ -106,14 +104,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         message.position = CGPoint(x: frame.midX, y: frame.midY)
         addChild(message)
         print("game message added")
-    }
-    
-    // Remove in-game message
-    func removeInGameMessage() {
-        if let messageNode = self.childNode(withName: "message_label") {
-            run(SKAction.afterDelay(0.25, runBlock: messageNode.removeFromParent))
-        }
-        print("game being removed")
     }
     
     // Restart current game level
