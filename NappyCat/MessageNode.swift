@@ -8,6 +8,8 @@
 import SpriteKit
 
 class MessageNode: SKLabelNode {
+    var bounceCount = 0
+    
     convenience init(message: String) {
         self.init(fontNamed: "AvenirNext-Regular")
         
@@ -27,7 +29,8 @@ class MessageNode: SKLabelNode {
         physicsBody = SKPhysicsBody(circleOfRadius: 10)
         physicsBody!.categoryBitMask = PhysicsCategory.Label
         physicsBody!.collisionBitMask = PhysicsCategory.Edge
+        // Receive a callback when the cat makes contact
+        physicsBody!.contactTestBitMask = PhysicsCategory.Edge
         physicsBody!.restitution = 0.7
-        
     }
 }
