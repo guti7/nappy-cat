@@ -32,6 +32,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var bedNode: BedNode!
     var catNode: CatNode!
     var playable = true
+    var currentLevel: Int = 0
     
     override func didMove(to view: SKView) {
         // TODO: Uncomment once testing is done
@@ -66,6 +67,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         // Recursively search for the cat body node
         catNode = (childNode(withName: "//cat_body") as! CatNode)
         
+    }
+    
+    // Prepare the next game level
+    class func level(levelNum: Int) -> GameScene? {
+        let scene = GameScene(fileNamed: "Level\(levelNum)")!
+        scene.currentLevel = levelNum
+        scene.scaleMode = .aspectFill
+        return scene
     }
     
     // Do some work after physics are finished simulating
@@ -120,8 +129,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     // Restart current game level
     func newGame() {
         // TODO: See GameViewController for other initial game set up options
-        let scene = GameScene(fileNamed: "GameScene")
-        scene!.scaleMode = scaleMode
+        let scene = GameScene.level(levelNum: currentLevel)
         view!.presentScene(scene)
     }
     
