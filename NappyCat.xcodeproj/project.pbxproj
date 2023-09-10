@@ -117,11 +117,11 @@
 			children = (
 				448F71512AA81967009A613D /* SKTUtils */,
 				44EC3F482AA22A0800E0B2E2 /* Scenes */,
-				44EC3F262AA186F400E0B2E2 /* AppDelegate.swift */,
 				44EC3F2A2AA186F400E0B2E2 /* Actions.sks */,
-				44EC3F2C2AA186F400E0B2E2 /* GameScene.swift */,
 				4481CA422AAD364A009AFD58 /* Nodes */,
+				44EC3F262AA186F400E0B2E2 /* AppDelegate.swift */,
 				44EC3F2E2AA186F400E0B2E2 /* GameViewController.swift */,
+				44EC3F2C2AA186F400E0B2E2 /* GameScene.swift */,
 				44EC3F302AA186F400E0B2E2 /* Main.storyboard */,
 				44EC3F332AA186F600E0B2E2 /* Assets.xcassets */,
 				44EC3F352AA186F600E0B2E2 /* LaunchScreen.storyboard */,
