@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4481CA412AACFDE1009AFD58 /* CGFloat+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4481CA402AACFDE1009AFD58 /* CGFloat+Extensions.swift */; };
+		4481CA442AAD3EB9009AFD58 /* Level2.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4481CA432AAD3EB9009AFD58 /* Level2.sks */; };
+		4481CA462AAD4363009AFD58 /* SpringNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4481CA452AAD4363009AFD58 /* SpringNode.swift */; };
 		448F71532AA819DF009A613D /* SKTAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448F71522AA819DF009A613D /* SKTAudio.swift */; };
 		448F71552AA8B35F009A613D /* BlockNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448F71542AA8B35F009A613D /* BlockNode.swift */; };
 		448F71572AA91588009A613D /* MessageNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448F71562AA91588009A613D /* MessageNode.swift */; };
@@ -34,6 +36,8 @@
 
 /* Begin PBXFileReference section */
 		4481CA402AACFDE1009AFD58 /* CGFloat+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extensions.swift"; sourceTree = "<group>"; };
+		4481CA432AAD3EB9009AFD58 /* Level2.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level2.sks; sourceTree = "<group>"; };
+		4481CA452AAD4363009AFD58 /* SpringNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpringNode.swift; sourceTree = "<group>"; };
 		448F71522AA819DF009A613D /* SKTAudio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKTAudio.swift; sourceTree = "<group>"; };
 		448F71542AA8B35F009A613D /* BlockNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockNode.swift; sourceTree = "<group>"; };
 		448F71562AA91588009A613D /* MessageNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageNode.swift; sourceTree = "<group>"; };
@@ -77,6 +81,7 @@
 				448F71542AA8B35F009A613D /* BlockNode.swift */,
 				44F4E5B12AA6A9C000D0561F /* BedNode.swift */,
 				44F4E5B32AA6B23100D0561F /* CatNode.swift */,
+				4481CA452AAD4363009AFD58 /* SpringNode.swift */,
 			);
 			path = Nodes;
 			sourceTree = "<group>";
@@ -140,6 +145,7 @@
 		44EC3F482AA22A0800E0B2E2 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				4481CA432AAD3EB9009AFD58 /* Level2.sks */,
 				44EC3F282AA186F400E0B2E2 /* Level1.sks */,
 				44EC3F492AA22A6D00E0B2E2 /* Cat.sks */,
 				44B999982AA4CC7C002D5E77 /* CatCurl.sks */,
@@ -211,6 +217,7 @@
 				44EC3F462AA1F25800E0B2E2 /* lose.mp3 in Resources */,
 				44EC3F342AA186F600E0B2E2 /* Assets.xcassets in Resources */,
 				44B9999B2AA4D109002D5E77 /* CatWakeUp.sks in Resources */,
+				4481CA442AAD3EB9009AFD58 /* Level2.sks in Resources */,
 				44B999992AA4CC7C002D5E77 /* CatCurl.sks in Resources */,
 				44EC3F452AA1F25800E0B2E2 /* win.mp3 in Resources */,
 				44EC3F372AA186F600E0B2E2 /* LaunchScreen.storyboard in Resources */,
@@ -237,6 +244,7 @@
 				448F71552AA8B35F009A613D /* BlockNode.swift in Sources */,
 				4481CA412AACFDE1009AFD58 /* CGFloat+Extensions.swift in Sources */,
 				44EC3F2F2AA186F400E0B2E2 /* GameViewController.swift in Sources */,
+				4481CA462AAD4363009AFD58 /* SpringNode.swift in Sources */,
 				44EC3F272AA186F400E0B2E2 /* AppDelegate.swift in Sources */,
 				448F71572AA91588009A613D /* MessageNode.swift in Sources */,
 			);
