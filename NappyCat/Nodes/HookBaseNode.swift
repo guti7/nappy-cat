@@ -21,6 +21,12 @@ class HookBaseNode: SKSpriteNode, EventListenerNode {
         guard let scene = scene else {
             return
         }
-        print("Hook base added.")
+        
+        // Fix join the scene with the base node
+        let ceilingFix = SKPhysicsJointFixed.joint(
+            withBodyA: scene.physicsBody!,
+            bodyB: self.physicsBody!,
+            anchor: CGPoint.zero)
+        scene.physicsWorld.add(ceilingFix)
     }
 }
