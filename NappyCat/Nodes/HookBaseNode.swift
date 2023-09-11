@@ -47,5 +47,13 @@ class HookBaseNode: SKSpriteNode, EventListenerNode {
         hookNode.physicsBody!.contactTestBitMask = PhysicsCategory.Cat
         
         scene.addChild(hookNode)
+        
+        // Connect the hook to hook base by creating a spring joint
+        let hookPosition = CGPoint(x: hookNode.position.x,
+                                   y: hookNode.position.y + hookNode.size.height / 2)
+        
+        let ropeSpringJoint = SKPhysicsJointSpring.joint(withBodyA: self.physicsBody!, bodyB: hookNode.physicsBody!, anchorA: self.position, anchorB: hookPosition)
+        
+        scene.physicsWorld.add(ropeSpringJoint)
     }
 }
