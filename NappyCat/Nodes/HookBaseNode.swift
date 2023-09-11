@@ -28,5 +28,11 @@ class HookBaseNode: SKSpriteNode, EventListenerNode {
             bodyB: self.physicsBody!,
             anchor: CGPoint.zero)
         scene.physicsWorld.add(ceilingFix)
+        
+        // Construct the rope
+        ropeNode.anchorPoint = CGPoint(x: 0, y: 0.5)
+        ropeNode.zRotation = CGFloat(270).degreesToRadians()
+        ropeNode.position = self.position
+        scene.addChild(ropeNode)
     }
 }
