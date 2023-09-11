@@ -34,5 +34,18 @@ class HookBaseNode: SKSpriteNode, EventListenerNode {
         ropeNode.zRotation = CGFloat(270).degreesToRadians()
         ropeNode.position = self.position
         scene.addChild(ropeNode)
+        
+        // Set up the hook
+        hookNode.position = CGPoint(x: position.x,
+                                    y: position.y - ropeNode.size.width)
+        
+        hookNode.physicsBody =
+            SKPhysicsBody(circleOfRadius: hookNode.size.width / 2)
+        
+        hookNode.physicsBody!.categoryBitMask    = PhysicsCategory.Hook
+        hookNode.physicsBody!.collisionBitMask   = PhysicsCategory.None
+        hookNode.physicsBody!.contactTestBitMask = PhysicsCategory.Cat
+        
+        scene.addChild(hookNode)
     }
 }

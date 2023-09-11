@@ -19,13 +19,14 @@ protocol InteractiveNode {
 
 // Physics body collision categories
 struct PhysicsCategory {
-    static let None:   UInt32 = 0        //  0 -   0000
-    static let Cat:    UInt32 = 0b1      //  1 -   0001
-    static let Block:  UInt32 = 0b10     //  2 -   0010
-    static let Bed:    UInt32 = 0b100    //  4 -   0100
-    static let Edge:   UInt32 = 0b1000   //  8 -   1000
-    static let Label:  UInt32 = 0b10000  // 16 -  10000
-    static let Spring: UInt32 = 0b100000 // 32 - 100000
+    static let None:   UInt32 = 0         //  0 - 00000000
+    static let Cat:    UInt32 = 0b1       //  1 - 00000001
+    static let Block:  UInt32 = 0b10      //  2 - 00000010
+    static let Bed:    UInt32 = 0b100     //  4 - 00000100
+    static let Edge:   UInt32 = 0b1000    //  8 - 00001000
+    static let Label:  UInt32 = 0b10000   // 16 - 00010000
+    static let Spring: UInt32 = 0b100000  // 32 - 00100000
+    static let Hook:   UInt32 = 0b1000000 // 64 - 01000000
 }
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
