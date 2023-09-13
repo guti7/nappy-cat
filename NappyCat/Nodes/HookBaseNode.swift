@@ -33,6 +33,11 @@ class HookBaseNode: SKSpriteNode, EventListenerNode {
         ropeNode.anchorPoint = CGPoint(x: 0, y: 0.5)
         ropeNode.zRotation = CGFloat(270).degreesToRadians()
         ropeNode.position = self.position
+        
+        // Add constraints to rope
+        let range = SKRange(lowerLimit: 0.0, upperLimit: 0.0)
+        let orientConstraint = SKConstraint.orient(to: hookNode, offset: range)
+        ropeNode.constraints = [orientConstraint]
         scene.addChild(ropeNode)
         
         // Set up the hook
