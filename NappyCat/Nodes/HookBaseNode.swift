@@ -60,5 +60,9 @@ class HookBaseNode: SKSpriteNode, EventListenerNode {
         let ropeSpringJoint = SKPhysicsJointSpring.joint(withBodyA: self.physicsBody!, bodyB: hookNode.physicsBody!, anchorA: self.position, anchorB: hookPosition)
         
         scene.physicsWorld.add(ropeSpringJoint)
+        
+        // Apply an impulse to the hook
+        hookNode.physicsBody!.applyImpulse(CGVector(dx: 50, dy: 0))
+
     }
 }
