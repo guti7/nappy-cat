@@ -7,10 +7,13 @@
 
 import SpriteKit
 
-class CatNode: SKSpriteNode, EventListenerNode {
+class CatNode: SKSpriteNode, EventListenerNode, InteractiveNode {
     
     func didMoveToScene() {
+        // TODO: Remove debugging print statement
         print("cat added to scene")
+        
+        isUserInteractionEnabled = true
         
         let catBodyTexture = SKTexture(imageNamed: "cat_body_outline")
         parent!.physicsBody = SKPhysicsBody(texture: catBodyTexture, size: catBodyTexture.size())
@@ -73,5 +76,15 @@ class CatNode: SKSpriteNode, EventListenerNode {
             SKAction.move(to: localPoint, duration: 0.66),
             SKAction.rotate(toAngle: -parent!.zRotation, duration: 0.5)
         ]))
+    }
+    
+    func interact() {
+        // TODO: Remove debugging print statement
+        print("interact after the cat node was touched")
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesEnded(touches, with: event)
+        interact()
     }
 }
