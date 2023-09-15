@@ -22,6 +22,9 @@ class HookBaseNode: SKSpriteNode, EventListenerNode {
             return
         }
         
+        // Observe for notifications of cat tap type
+        NotificationCenter.default.addObserver(self, selector: #selector(catTapped), name: Notification.Name(CatNode.kCatTappedNotification), object: nil)
+        
         // Fix join the scene with the base node
         let ceilingFix = SKPhysicsJointFixed.joint(
             withBodyA: scene.physicsBody!,
@@ -80,5 +83,18 @@ class HookBaseNode: SKSpriteNode, EventListenerNode {
         scene!.physicsWorld.add(hookJoint)
         
         hookNode.physicsBody!.contactTestBitMask = PhysicsCategory.None
+    }
+    
+    @objc
+    func catTapped() {
+        if isHooked {
+            releaseCat()
+        }
+    }
+    
+    /// Release the cat from the hook
+    func releaseCat() {
+        // TODO: Remove debugging print statement
+        print("Cat is being released.")
     }
 }
