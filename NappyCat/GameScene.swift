@@ -118,7 +118,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             print("Cat on ground: Failure")
             lose()
         } else if collision == PhysicsCategory.Cat | PhysicsCategory.Hook && hookBaseNode?.isHooked == false {
-            print("Cat is hooked")
+            hookBaseNode!.hookCat(catPhysicsBody: catNode.parent!.physicsBody!)
         }
     }
     

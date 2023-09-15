@@ -65,4 +65,20 @@ class HookBaseNode: SKSpriteNode, EventListenerNode {
         hookNode.physicsBody!.applyImpulse(CGVector(dx: 50, dy: 0))
 
     }
+    
+    /// Hook the cat to the hook
+    func hookCat(catPhysicsBody: SKPhysicsBody) {
+        // TODO: Remove debugging print statement
+        print("Cat is being hooked.")
+        
+        catPhysicsBody.velocity = CGVector(dx: 0, dy: 0)
+        catPhysicsBody.angularVelocity = 0
+        
+        let pinPoint = CGPoint(x: hookNode.position.x,
+                               y: hookNode.position.y + hookNode.size.height / 2)
+        hookJoint = SKPhysicsJointFixed.joint(withBodyA: hookNode.physicsBody!, bodyB: catPhysicsBody, anchor: pinPoint)
+        scene!.physicsWorld.add(hookJoint)
+        
+        hookNode.physicsBody!.contactTestBitMask = PhysicsCategory.None
+    }
 }
