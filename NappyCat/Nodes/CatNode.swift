@@ -9,6 +9,9 @@ import SpriteKit
 
 class CatNode: SKSpriteNode, EventListenerNode, InteractiveNode {
     
+    // Notification for interactions with the cat
+    static let kCatTappedNotification = "kCatTappedNotification"
+    
     func didMoveToScene() {
         // TODO: Remove debugging print statement
         print("cat added to scene")
@@ -79,8 +82,9 @@ class CatNode: SKSpriteNode, EventListenerNode, InteractiveNode {
     }
     
     func interact() {
-        // TODO: Remove debugging print statement
-        print("interact after the cat node was touched")
+        print("Cat is being interacted with")
+        // Send notification to notification center for each cat tap
+        NotificationCenter.default.post(Notification(name: NSNotification.Name( CatNode.kCatTappedNotification), object: nil))
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
