@@ -33,6 +33,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     // Properties
     var bedNode: BedNode!
     var catNode: CatNode!
+    var hookBaseNode: HookBaseNode?
     var playable = true
     var currentLevel: Int = 0
     
@@ -68,7 +69,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         bedNode = (childNode(withName: "bed") as! BedNode)
         // Recursively search for the cat body node
         catNode = (childNode(withName: "//cat_body") as! CatNode)
-        
+        hookBaseNode = (childNode(withName: "hookBase") as? HookBaseNode)
     }
     
     // Prepare the next game level
@@ -116,6 +117,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         } else if  collision == PhysicsCategory.Cat | PhysicsCategory.Edge {
             print("Cat on ground: Failure")
             lose()
+        } else if collision == PhysicsCategory.Cat | PhysicsCategory.Hook && hookBaseNode?.isHooked == false {
+            print("Cat is hooked")
         }
     }
     
