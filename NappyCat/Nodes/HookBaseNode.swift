@@ -96,5 +96,14 @@ class HookBaseNode: SKSpriteNode, EventListenerNode {
     func releaseCat() {
         // TODO: Remove debugging print statement
         print("Cat is being released.")
+        
+        // Reset hooNode settings and destroy the hook joint
+        hookNode.physicsBody!.categoryBitMask = PhysicsCategory.None
+        hookNode.physicsBody!.contactTestBitMask = PhysicsCategory.None
+        
+        hookJoint.bodyA.node!.zRotation = 0
+        hookJoint.bodyB.node!.zRotation = 0
+        scene!.physicsWorld.remove(hookJoint)
+        hookJoint = nil
     }
 }
