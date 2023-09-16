@@ -10,9 +10,6 @@ import SpriteKit
 class StoneNode: SKSpriteNode, EventListenerNode, InteractiveNode {
     
     func didMoveToScene() {
-        // TODO: Remove debugging print statement
-        print("Stone node added.")
-        
         // Make sure the scene is loaded
         guard let scene = scene else {
             return
@@ -32,15 +29,12 @@ class StoneNode: SKSpriteNode, EventListenerNode, InteractiveNode {
     // Respond to touches on the stone block
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesEnded(touches, with: event)
-        print("Stone was touched. \(self)")
         interact()
     }
     
     /// Looks through the scene and binds together all the stone pieces
     static func makeCompoundNode(in scene: SKScene) -> SKNode {
         let compound = StoneNode()
-        // TODO: Remove debugging print statement
-        print("About to join any stone nodes to one compound stone node")
         
         // Move the stone nodes to the compound node hierarchy
         for stone in scene.children.filter({ node in node is StoneNode }) {
