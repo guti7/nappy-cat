@@ -22,7 +22,6 @@ class StoneNode: SKSpriteNode, EventListenerNode, InteractiveNode {
         if parent == scene {
             scene.addChild(StoneNode.makeCompoundNode(in: scene))
         }
-        isUserInteractionEnabled = true
     }
     
     func interact() {
@@ -33,7 +32,7 @@ class StoneNode: SKSpriteNode, EventListenerNode, InteractiveNode {
     // Respond to touches on the stone block
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesEnded(touches, with: event)
-        print("Stone was touched.")
+        print("Stone was touched. \(self)")
         interact()
     }
     
@@ -42,6 +41,24 @@ class StoneNode: SKSpriteNode, EventListenerNode, InteractiveNode {
         let compound = StoneNode()
         // TODO: Remove debugging print statement
         print("About to join any stone nodes to one compound stone node")
+        
+        // Move the stone nodes to the compound node hierarchy
+        for stone in scene.children.filter({ node in node is StoneNode }) {
+            stone.removeFromParent()
+            compound.addChild(stone)
+        }
+        
+        // Add physics bodies to all stone nodes in the compound
+        let bodies = compound.children.map { node in
+            SKPhysicsBody(rectangleOf: node.frame.size, center: node.position)
+        }
+        
+        // Set up physics body for the compound node
+        compound.physicsBody = SKPhysicsBody(bodies: bodies)
+        compound.physicsBody!.categoryBitMask = PhysicsCategory.Block
+        compound.physicsBody!.collisionBitMask = PhysicsCategory.Edge | PhysicsCategory.Cat | PhysicsCategory.Block
+        compound.isUserInteractionEnabled = true
+        compound.zPosition = 1
         
         return compound
     }
