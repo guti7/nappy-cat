@@ -145,6 +145,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     // Losing scenario
     func lose() {
         playable = false
+        // take them to the previous level
+        if currentLevel > 1 {
+            currentLevel -= 1
+        }
         SKTAudio.sharedInstance().pauseBackgroundMusic()
         SKTAudio.sharedInstance().playSoundEffect("lose.mp3")
         inGameMessage(text: "Try Again...")
@@ -155,6 +159,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     // Winning scenario
     func win() {
         playable = false
+        // Get to the next level. Currently there is only 3 levels
+        if currentLevel < 3 {
+            currentLevel += 1
+        }
         SKTAudio.sharedInstance().pauseBackgroundMusic()
         SKTAudio.sharedInstance().playSoundEffect("win.mp3")
         inGameMessage(text: "Nice job!")
