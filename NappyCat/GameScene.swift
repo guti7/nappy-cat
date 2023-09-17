@@ -129,6 +129,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         message.position = CGPoint(x: frame.midX, y: frame.midY)
         addChild(message)
         print("game message added")
+        
+        for node in children {
+            node.isUserInteractionEnabled = false
+        }
     }
     
     // Restart current game level
