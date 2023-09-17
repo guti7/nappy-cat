@@ -71,8 +71,6 @@ class HookBaseNode: SKSpriteNode, EventListenerNode {
     
     /// Hook the cat to the hook
     func hookCat(catPhysicsBody: SKPhysicsBody) {
-        // TODO: Remove debugging print statement
-        print("Cat is being hooked.")
         
         catPhysicsBody.velocity = CGVector(dx: 0, dy: 0)
         catPhysicsBody.angularVelocity = 0
@@ -94,8 +92,6 @@ class HookBaseNode: SKSpriteNode, EventListenerNode {
     
     /// Release the cat from the hook
     func releaseCat() {
-        // TODO: Remove debugging print statement
-        print("Cat is being released.")
         
         // Reset hooNode settings and destroy the hook joint
         hookNode.physicsBody!.categoryBitMask = PhysicsCategory.None

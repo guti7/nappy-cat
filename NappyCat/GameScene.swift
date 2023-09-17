@@ -111,11 +111,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         // Collision is between Cat and Bed
         if collision == PhysicsCategory.Bed | PhysicsCategory.Cat {
-            print("Cat in bed: Success")
             win()
         // Collision is between Cat and Edge
         } else if  collision == PhysicsCategory.Cat | PhysicsCategory.Edge {
-            print("Cat on ground: Failure")
             lose()
         } else if collision == PhysicsCategory.Cat | PhysicsCategory.Hook && hookBaseNode?.isHooked == false {
             hookBaseNode!.hookCat(catPhysicsBody: catNode.parent!.physicsBody!)
@@ -128,7 +126,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         message.name = "message_label"
         message.position = CGPoint(x: frame.midX, y: frame.midY)
         addChild(message)
-        print("game message added")
         
         for node in children {
             node.isUserInteractionEnabled = false
@@ -137,7 +134,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     // Restart current game level
     func newGame() {
-        // TODO: See GameViewController for other initial game set up options
         let scene = GameScene.level(levelNum: currentLevel)
         view!.presentScene(scene)
     }

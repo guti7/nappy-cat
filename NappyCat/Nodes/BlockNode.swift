@@ -27,7 +27,6 @@ class BlockNode: SKSpriteNode, EventListenerNode, InteractiveNode {
     // Respond to taps on the block
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesEnded(touches, with: event)
-        print("destroy block")
         interact()
     }
 }

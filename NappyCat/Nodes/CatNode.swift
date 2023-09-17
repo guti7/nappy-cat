@@ -13,8 +13,6 @@ class CatNode: SKSpriteNode, EventListenerNode, InteractiveNode {
     static let kCatTappedNotification = "kCatTappedNotification"
     
     func didMoveToScene() {
-        // TODO: Remove debugging print statement
-        print("cat added to scene")
         
         isUserInteractionEnabled = true
         
@@ -82,7 +80,6 @@ class CatNode: SKSpriteNode, EventListenerNode, InteractiveNode {
     }
     
     func interact() {
-        print("Cat is being interacted with")
         // Send notification to notification center for each cat tap
         NotificationCenter.default.post(Notification(name: NSNotification.Name( CatNode.kCatTappedNotification), object: nil))
     }
