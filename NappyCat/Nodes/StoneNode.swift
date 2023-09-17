@@ -22,8 +22,13 @@ class StoneNode: SKSpriteNode, EventListenerNode, InteractiveNode {
     }
     
     func interact() {
-        // TODO: Remove debugging print statement
-        print("Interacted with stone node.")
+        // this will be called on the only stone node (compound)
+        isUserInteractionEnabled = false
+        
+        run(SKAction.sequence([
+            SKAction.playSoundFileNamed("pop.mp3", waitForCompletion: false),
+            SKAction.removeFromParent()
+        ]))
     }
     
     // Respond to touches on the stone block
