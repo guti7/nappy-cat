@@ -28,4 +28,9 @@ class PictureNode: SKSpriteNode, EventListenerNode, InteractiveNode {
         // add interaction with picture node
         print("Interact with picture node: \(self)")
     }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesEnded(touches, with: event)
+        interact()
+    }
 }
