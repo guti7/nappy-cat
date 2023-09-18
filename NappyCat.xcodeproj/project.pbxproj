@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		440BFE882AB8CD6D00ADBED4 /* discolights-loop.mov in Resources */ = {isa = PBXBuildFile; fileRef = 440BFE862AB8CD6C00ADBED4 /* discolights-loop.mov */; };
+		440BFE892AB8CD6D00ADBED4 /* disco-sound.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 440BFE872AB8CD6C00ADBED4 /* disco-sound.m4a */; };
 		4481CA412AACFDE1009AFD58 /* CGFloat+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4481CA402AACFDE1009AFD58 /* CGFloat+Extensions.swift */; };
 		4481CA442AAD3EB9009AFD58 /* Level2.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4481CA432AAD3EB9009AFD58 /* Level2.sks */; };
 		4481CA462AAD4363009AFD58 /* SpringNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4481CA452AAD4363009AFD58 /* SpringNode.swift */; };
@@ -39,6 +41,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		440BFE862AB8CD6C00ADBED4 /* discolights-loop.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "discolights-loop.mov"; sourceTree = "<group>"; };
+		440BFE872AB8CD6C00ADBED4 /* disco-sound.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "disco-sound.m4a"; sourceTree = "<group>"; };
 		4481CA402AACFDE1009AFD58 /* CGFloat+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extensions.swift"; sourceTree = "<group>"; };
 		4481CA432AAD3EB9009AFD58 /* Level2.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level2.sks; sourceTree = "<group>"; };
 		4481CA452AAD4363009AFD58 /* SpringNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpringNode.swift; sourceTree = "<group>"; };
@@ -82,6 +86,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		440BFE852AB8CD6C00ADBED4 /* Media */ = {
+			isa = PBXGroup;
+			children = (
+				440BFE862AB8CD6C00ADBED4 /* discolights-loop.mov */,
+				440BFE872AB8CD6C00ADBED4 /* disco-sound.m4a */,
+			);
+			path = Media;
+			sourceTree = "<group>";
+		};
 		4481CA422AAD364A009AFD58 /* Nodes */ = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +149,7 @@
 				44EC3F332AA186F600E0B2E2 /* Assets.xcassets */,
 				44EC3F352AA186F600E0B2E2 /* LaunchScreen.storyboard */,
 				44EC3F3D2AA1F25800E0B2E2 /* Sounds */,
+				440BFE852AB8CD6C00ADBED4 /* Media */,
 			);
 			path = NappyCat;
 			sourceTree = "<group>";
@@ -230,6 +244,8 @@
 				44EC3F342AA186F600E0B2E2 /* Assets.xcassets in Resources */,
 				44B9999B2AA4D109002D5E77 /* CatWakeUp.sks in Resources */,
 				44FC0ABD2AB7407D007DD981 /* Level4.sks in Resources */,
+				440BFE882AB8CD6D00ADBED4 /* discolights-loop.mov in Resources */,
+				440BFE892AB8CD6D00ADBED4 /* disco-sound.m4a in Resources */,
 				4481CA442AAD3EB9009AFD58 /* Level2.sks in Resources */,
 				44B999992AA4CC7C002D5E77 /* CatCurl.sks in Resources */,
 				44EC3F452AA1F25800E0B2E2 /* win.mp3 in Resources */,
