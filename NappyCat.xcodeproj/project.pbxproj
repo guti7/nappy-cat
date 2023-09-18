@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		440BFE882AB8CD6D00ADBED4 /* discolights-loop.mov in Resources */ = {isa = PBXBuildFile; fileRef = 440BFE862AB8CD6C00ADBED4 /* discolights-loop.mov */; };
 		440BFE892AB8CD6D00ADBED4 /* disco-sound.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 440BFE872AB8CD6C00ADBED4 /* disco-sound.m4a */; };
+		444B897B2AB8D23400124F23 /* Level5.sks in Resources */ = {isa = PBXBuildFile; fileRef = 444B897A2AB8D23400124F23 /* Level5.sks */; };
 		4481CA412AACFDE1009AFD58 /* CGFloat+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4481CA402AACFDE1009AFD58 /* CGFloat+Extensions.swift */; };
 		4481CA442AAD3EB9009AFD58 /* Level2.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4481CA432AAD3EB9009AFD58 /* Level2.sks */; };
 		4481CA462AAD4363009AFD58 /* SpringNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4481CA452AAD4363009AFD58 /* SpringNode.swift */; };
@@ -43,6 +44,7 @@
 /* Begin PBXFileReference section */
 		440BFE862AB8CD6C00ADBED4 /* discolights-loop.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "discolights-loop.mov"; sourceTree = "<group>"; };
 		440BFE872AB8CD6C00ADBED4 /* disco-sound.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "disco-sound.m4a"; sourceTree = "<group>"; };
+		444B897A2AB8D23400124F23 /* Level5.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level5.sks; sourceTree = "<group>"; };
 		4481CA402AACFDE1009AFD58 /* CGFloat+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extensions.swift"; sourceTree = "<group>"; };
 		4481CA432AAD3EB9009AFD58 /* Level2.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level2.sks; sourceTree = "<group>"; };
 		4481CA452AAD4363009AFD58 /* SpringNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpringNode.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 		44EC3F482AA22A0800E0B2E2 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				444B897A2AB8D23400124F23 /* Level5.sks */,
 				44FC0ABC2AB7407D007DD981 /* Level4.sks */,
 				44CE79E02AB6620000FB87B1 /* Level3.sks */,
 				4481CA432AAD3EB9009AFD58 /* Level2.sks */,
@@ -250,6 +253,7 @@
 				44B999992AA4CC7C002D5E77 /* CatCurl.sks in Resources */,
 				44EC3F452AA1F25800E0B2E2 /* win.mp3 in Resources */,
 				44EC3F372AA186F600E0B2E2 /* LaunchScreen.storyboard in Resources */,
+				444B897B2AB8D23400124F23 /* Level5.sks in Resources */,
 				44CE79E12AB6620000FB87B1 /* Level3.sks in Resources */,
 				44EC3F432AA1F25800E0B2E2 /* mrreow.mp3 in Resources */,
 				44EC3F442AA1F25800E0B2E2 /* pop.mp3 in Resources */,
