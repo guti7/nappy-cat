@@ -11,6 +11,7 @@
 		440BFE892AB8CD6D00ADBED4 /* disco-sound.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 440BFE872AB8CD6C00ADBED4 /* disco-sound.m4a */; };
 		444B897B2AB8D23400124F23 /* Level5.sks in Resources */ = {isa = PBXBuildFile; fileRef = 444B897A2AB8D23400124F23 /* Level5.sks */; };
 		444B897D2AB8EE8C00124F23 /* PictureNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444B897C2AB8EE8C00124F23 /* PictureNode.swift */; };
+		444B897F2AB8F74800124F23 /* Level6.sks in Resources */ = {isa = PBXBuildFile; fileRef = 444B897E2AB8F74800124F23 /* Level6.sks */; };
 		4481CA412AACFDE1009AFD58 /* CGFloat+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4481CA402AACFDE1009AFD58 /* CGFloat+Extensions.swift */; };
 		4481CA442AAD3EB9009AFD58 /* Level2.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4481CA432AAD3EB9009AFD58 /* Level2.sks */; };
 		4481CA462AAD4363009AFD58 /* SpringNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4481CA452AAD4363009AFD58 /* SpringNode.swift */; };
@@ -47,6 +48,7 @@
 		440BFE872AB8CD6C00ADBED4 /* disco-sound.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "disco-sound.m4a"; sourceTree = "<group>"; };
 		444B897A2AB8D23400124F23 /* Level5.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level5.sks; sourceTree = "<group>"; };
 		444B897C2AB8EE8C00124F23 /* PictureNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureNode.swift; sourceTree = "<group>"; };
+		444B897E2AB8F74800124F23 /* Level6.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level6.sks; sourceTree = "<group>"; };
 		4481CA402AACFDE1009AFD58 /* CGFloat+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extensions.swift"; sourceTree = "<group>"; };
 		4481CA432AAD3EB9009AFD58 /* Level2.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level2.sks; sourceTree = "<group>"; };
 		4481CA452AAD4363009AFD58 /* SpringNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpringNode.swift; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 		44EC3F482AA22A0800E0B2E2 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				444B897E2AB8F74800124F23 /* Level6.sks */,
 				444B897A2AB8D23400124F23 /* Level5.sks */,
 				44FC0ABC2AB7407D007DD981 /* Level4.sks */,
 				44CE79E02AB6620000FB87B1 /* Level3.sks */,
@@ -263,6 +266,7 @@
 				44EC3F472AA1F25800E0B2E2 /* backgroundMusic.mp3 in Resources */,
 				44EC3F2B2AA186F400E0B2E2 /* Actions.sks in Resources */,
 				44EC3F4A2AA22A6D00E0B2E2 /* Cat.sks in Resources */,
+				444B897F2AB8F74800124F23 /* Level6.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
