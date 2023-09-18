@@ -25,8 +25,9 @@ class PictureNode: SKSpriteNode, EventListenerNode, InteractiveNode {
     }
     
     func interact() {
-        // add interaction with picture node
-        print("Interact with picture node: \(self)")
+        // make the picture frame drop when touched
+        isUserInteractionEnabled = false
+        physicsBody!.isDynamic = true
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
