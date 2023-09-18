@@ -35,6 +35,7 @@
 		44EC3F4A2AA22A6D00E0B2E2 /* Cat.sks in Resources */ = {isa = PBXBuildFile; fileRef = 44EC3F492AA22A6D00E0B2E2 /* Cat.sks */; };
 		44F4E5B22AA6A9C000D0561F /* BedNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F4E5B12AA6A9C000D0561F /* BedNode.swift */; };
 		44F4E5B42AA6B23100D0561F /* CatNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F4E5B32AA6B23100D0561F /* CatNode.swift */; };
+		44FC0ABD2AB7407D007DD981 /* Level4.sks in Resources */ = {isa = PBXBuildFile; fileRef = 44FC0ABC2AB7407D007DD981 /* Level4.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +68,7 @@
 		44EC3F492AA22A6D00E0B2E2 /* Cat.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Cat.sks; sourceTree = "<group>"; };
 		44F4E5B12AA6A9C000D0561F /* BedNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BedNode.swift; sourceTree = "<group>"; };
 		44F4E5B32AA6B23100D0561F /* CatNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatNode.swift; sourceTree = "<group>"; };
+		44FC0ABC2AB7407D007DD981 /* Level4.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level4.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +155,7 @@
 		44EC3F482AA22A0800E0B2E2 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				44FC0ABC2AB7407D007DD981 /* Level4.sks */,
 				44CE79E02AB6620000FB87B1 /* Level3.sks */,
 				4481CA432AAD3EB9009AFD58 /* Level2.sks */,
 				44EC3F282AA186F400E0B2E2 /* Level1.sks */,
@@ -226,6 +229,7 @@
 				44EC3F462AA1F25800E0B2E2 /* lose.mp3 in Resources */,
 				44EC3F342AA186F600E0B2E2 /* Assets.xcassets in Resources */,
 				44B9999B2AA4D109002D5E77 /* CatWakeUp.sks in Resources */,
+				44FC0ABD2AB7407D007DD981 /* Level4.sks in Resources */,
 				4481CA442AAD3EB9009AFD58 /* Level2.sks in Resources */,
 				44B999992AA4CC7C002D5E77 /* CatCurl.sks in Resources */,
 				44EC3F452AA1F25800E0B2E2 /* win.mp3 in Resources */,

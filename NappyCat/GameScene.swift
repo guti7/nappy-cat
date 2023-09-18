@@ -34,6 +34,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var bedNode: BedNode!
     var catNode: CatNode!
     var hookBaseNode: HookBaseNode?
+    var seesawNode: SKSpriteNode?
     var playable = true
     var currentLevel: Int = 0
     
@@ -70,6 +71,23 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         // Recursively search for the cat body node
         catNode = (childNode(withName: "//cat_body") as! CatNode)
         hookBaseNode = (childNode(withName: "hookBase") as? HookBaseNode)
+        seesawNode = (childNode(withName: "seesaw") as? SKSpriteNode)
+        
+        // pin seesaw to seesaw base
+        if let seesaw = seesawNode {
+            guard let seesawBase = (childNode(withName: "seesawBase") as? SKSpriteNode) else {
+                return
+            }
+            seesaw.physicsBody!.categoryBitMask = PhysicsCategory.Block
+            // FIXME: Collision mask does not include edge category
+            // When we add the Edge mask the seesaw behaves erradically
+            // since it is partially outside the edge loop
+            seesaw.physicsBody!.collisionBitMask = PhysicsCategory.Block | PhysicsCategory.Cat
+            
+            let pinJoint = SKPhysicsJointPin.joint(withBodyA: seesaw.physicsBody!, bodyB: seesawBase.physicsBody!, anchor: seesawBase.position)
+            
+            scene!.physicsWorld.add(pinJoint)
+        }
     }
     
     // Prepare the next game level
