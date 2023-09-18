@@ -16,7 +16,8 @@ class GameViewController: UIViewController {
         
         if let view = self.view as! SKView? {
             // Load the first game level
-            if let scene = GameScene.level(levelNum: 1) {                
+            // TODO: Revert back to level 1 after testing new levels 
+            if let scene = GameScene.level(levelNum: 5) {                
                 // Present the scene
                 view.presentScene(scene)
             }

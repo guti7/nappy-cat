@@ -10,6 +10,7 @@
 		440BFE882AB8CD6D00ADBED4 /* discolights-loop.mov in Resources */ = {isa = PBXBuildFile; fileRef = 440BFE862AB8CD6C00ADBED4 /* discolights-loop.mov */; };
 		440BFE892AB8CD6D00ADBED4 /* disco-sound.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 440BFE872AB8CD6C00ADBED4 /* disco-sound.m4a */; };
 		444B897B2AB8D23400124F23 /* Level5.sks in Resources */ = {isa = PBXBuildFile; fileRef = 444B897A2AB8D23400124F23 /* Level5.sks */; };
+		444B897D2AB8EE8C00124F23 /* PictureNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444B897C2AB8EE8C00124F23 /* PictureNode.swift */; };
 		4481CA412AACFDE1009AFD58 /* CGFloat+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4481CA402AACFDE1009AFD58 /* CGFloat+Extensions.swift */; };
 		4481CA442AAD3EB9009AFD58 /* Level2.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4481CA432AAD3EB9009AFD58 /* Level2.sks */; };
 		4481CA462AAD4363009AFD58 /* SpringNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4481CA452AAD4363009AFD58 /* SpringNode.swift */; };
@@ -45,6 +46,7 @@
 		440BFE862AB8CD6C00ADBED4 /* discolights-loop.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "discolights-loop.mov"; sourceTree = "<group>"; };
 		440BFE872AB8CD6C00ADBED4 /* disco-sound.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "disco-sound.m4a"; sourceTree = "<group>"; };
 		444B897A2AB8D23400124F23 /* Level5.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level5.sks; sourceTree = "<group>"; };
+		444B897C2AB8EE8C00124F23 /* PictureNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureNode.swift; sourceTree = "<group>"; };
 		4481CA402AACFDE1009AFD58 /* CGFloat+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extensions.swift"; sourceTree = "<group>"; };
 		4481CA432AAD3EB9009AFD58 /* Level2.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level2.sks; sourceTree = "<group>"; };
 		4481CA452AAD4363009AFD58 /* SpringNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpringNode.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				4481CA452AAD4363009AFD58 /* SpringNode.swift */,
 				44EB069D2AAE627E003B9A45 /* HookBaseNode.swift */,
 				44CE79E22AB665DC00FB87B1 /* StoneNode.swift */,
+				444B897C2AB8EE8C00124F23 /* PictureNode.swift */,
 			);
 			path = Nodes;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 				44EB069E2AAE627E003B9A45 /* HookBaseNode.swift in Sources */,
 				44EC3F2F2AA186F400E0B2E2 /* GameViewController.swift in Sources */,
 				4481CA462AAD4363009AFD58 /* SpringNode.swift in Sources */,
+				444B897D2AB8EE8C00124F23 /* PictureNode.swift in Sources */,
 				44CE79E32AB665DC00FB87B1 /* StoneNode.swift in Sources */,
 				44EC3F272AA186F400E0B2E2 /* AppDelegate.swift in Sources */,
 				448F71572AA91588009A613D /* MessageNode.swift in Sources */,
