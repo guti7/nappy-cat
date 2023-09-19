@@ -12,8 +12,20 @@ class DiscoBallNode: SKSpriteNode, EventListenerNode, InteractiveNode {
     
     private var player: AVPlayer!
     private var video: SKVideoNode!
+    
+    private var isDiscoTime: Bool = false {
+        didSet {
+            video.isHidden = !isDiscoTime
+            if isDiscoTime {
+                video.play()
+            } else {
+                video.pause()
+            }
+        }
+    }
 
     func didMoveToScene() {
+        isUserInteractionEnabled = true
         
         // Observe the av player for end of current video file
         NotificationCenter.default.addObserver(self, selector: #selector(didReachEndOfVideo), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: nil)
@@ -30,12 +42,16 @@ class DiscoBallNode: SKSpriteNode, EventListenerNode, InteractiveNode {
         video.alpha = 0.75
         scene!.addChild(video)
         
-        // play the video
-        video.play()
+        // video initial state
+        video.isHidden = true
+        video.pause()
     }
     
     func interact() {
-        // TODO: Interact with disco ball node, play video, play music?
+        print("Disco time!")
+        if !isDiscoTime {
+            isDiscoTime = true
+        }
     }
     
     /// Rewinds the playback once it reaches the end of the current video
@@ -46,5 +62,10 @@ class DiscoBallNode: SKSpriteNode, EventListenerNode, InteractiveNode {
         player.currentItem!.seek(to: CMTime.zero) { [weak self] _ in
             self?.player.play()
         }
+    }
+
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent? ) {
+        super.touchesEnded(touches, with: event)
+        interact()
     }
 }
