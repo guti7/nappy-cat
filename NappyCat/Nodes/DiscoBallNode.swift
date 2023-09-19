@@ -27,6 +27,7 @@ class DiscoBallNode: SKSpriteNode, EventListenerNode, InteractiveNode {
         video.size = scene!.size
         video.position = CGPoint(x: scene!.frame.midX, y: scene!.frame.midY)
         video.zPosition = -1
+        video.alpha = 0.75
         scene!.addChild(video)
         
         // play the video
