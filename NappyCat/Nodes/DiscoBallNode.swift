@@ -13,16 +13,27 @@ class DiscoBallNode: SKSpriteNode, EventListenerNode, InteractiveNode {
     private var player: AVPlayer!
     private var video: SKVideoNode!
     
+    /// Flag for disco time dance mood
     private var isDiscoTime: Bool = false {
         didSet {
             video.isHidden = !isDiscoTime
             if isDiscoTime {
                 video.play()
+                run(spinAction)
             } else {
                 video.pause()
+                removeAllActions()
             }
         }
     }
+    
+    /// Frame animation for the disco ball
+    private let spinAction = SKAction.repeatForever(
+        SKAction.animate(with: [
+            SKTexture(imageNamed: "discoball1"),
+            SKTexture(imageNamed: "discoball2"),
+            SKTexture(imageNamed: "discoball3")
+        ], timePerFrame: 0.2))
 
     func didMoveToScene() {
         isUserInteractionEnabled = true
