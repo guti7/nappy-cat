@@ -15,6 +15,9 @@ class DiscoBallNode: SKSpriteNode, EventListenerNode, InteractiveNode {
 
     func didMoveToScene() {
         
+        // Observe the av player for end of current video file
+        NotificationCenter.default.addObserver(self, selector: #selector(didReachEndOfVideo), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: nil)
+        
         // load video file
         let fileURL = Bundle.main.url(forResource: "discolights-loop", withExtension: "mov")!
         player = AVPlayer(url: fileURL)
@@ -32,5 +35,15 @@ class DiscoBallNode: SKSpriteNode, EventListenerNode, InteractiveNode {
     
     func interact() {
         // TODO: Interact with disco ball node, play video, play music?
+    }
+    
+    /// Rewinds the playback once it reaches the end of the current video
+    @objc
+    func didReachEndOfVideo() {
+        // TODO: Remove debugging print statement
+        print("rewind")
+        player.currentItem!.seek(to: CMTime.zero) { [weak self] _ in
+            self?.player.play()
+        }
     }
 }
