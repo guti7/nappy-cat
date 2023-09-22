@@ -9,6 +9,9 @@ import SpriteKit
 
 class CatNode: SKSpriteNode, EventListenerNode, InteractiveNode {
     
+    /// Keeps track of the cat dancing mood
+    private var isDoingTheDance = false
+    
     // Notification for interactions with the cat
     static let kCatTappedNotification = "kCatTappedNotification"
     
@@ -82,6 +85,21 @@ class CatNode: SKSpriteNode, EventListenerNode, InteractiveNode {
     func interact() {
         // Send notification to notification center for each cat tap
         NotificationCenter.default.post(Notification(name: NSNotification.Name( CatNode.kCatTappedNotification), object: nil))
+        
+        // Toggle the cat's dance mood
+        if DiscoBallNode.isDiscoTime && !isDoingTheDance {
+            isDoingTheDance = true
+            let move = SKAction.sequence([
+                SKAction.moveBy(x: 80, y: 0, duration: 0.5),
+                SKAction.wait(forDuration: 0.5),
+                SKAction.moveBy(x: -30, y: 0, duration: 0.5)
+            ])
+            let dance = SKAction.repeat(move, count: 3)
+            
+            parent!.run(dance) {
+                self.isDoingTheDance = false
+            }
+        }
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {

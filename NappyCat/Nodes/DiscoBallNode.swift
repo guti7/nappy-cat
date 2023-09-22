@@ -13,10 +13,14 @@ class DiscoBallNode: SKSpriteNode, EventListenerNode, InteractiveNode {
     private var player: AVPlayer!
     private var video: SKVideoNode!
     
+    /// It is disco time
+    static private(set) var isDiscoTime = false
+    
     /// Flag for disco time dance mood
     private var isDiscoTime: Bool = false {
         didSet {
             video.isHidden = !isDiscoTime
+            DiscoBallNode.isDiscoTime = self.isDiscoTime
             
             // toggle the video play or pause with disco ball animation
             if isDiscoTime {
