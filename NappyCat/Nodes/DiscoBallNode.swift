@@ -17,12 +17,24 @@ class DiscoBallNode: SKSpriteNode, EventListenerNode, InteractiveNode {
     private var isDiscoTime: Bool = false {
         didSet {
             video.isHidden = !isDiscoTime
+            
+            // toggle the video play or pause with disco ball animation
             if isDiscoTime {
                 video.play()
                 run(spinAction)
             } else {
                 video.pause()
                 removeAllActions()
+            }
+            
+            // toggle between background music and the disco music
+            SKTAudio.sharedInstance().playBackgroundMusic(isDiscoTime ? "disco-sound.m4a" : "backgroundMusic.mp3")
+            
+            // automatically turn off disco time mode
+            if isDiscoTime {
+                video.run(SKAction.wait(forDuration: 5.0)) {
+                    self.isDiscoTime = false
+                }
             }
         }
     }
@@ -59,6 +71,7 @@ class DiscoBallNode: SKSpriteNode, EventListenerNode, InteractiveNode {
     }
     
     func interact() {
+        // TODO: Remove debugging print statement
         print("Disco time!")
         if !isDiscoTime {
             isDiscoTime = true
