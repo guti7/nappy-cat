@@ -33,6 +33,8 @@ class HintNode: SKSpriteNode, EventListenerNode {
         shape.strokeColor = SKColor.gray
         shape.lineWidth = 4
         shape.fillColor = SKColor.white
+        shape.fillTexture = SKTexture(imageNamed: "wood_tinted")
+        shape.alpha = 0.8
         
         addChild(shape)
     }
