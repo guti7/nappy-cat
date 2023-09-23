@@ -20,6 +20,7 @@
 		448F71552AA8B35F009A613D /* BlockNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448F71542AA8B35F009A613D /* BlockNode.swift */; };
 		448F71572AA91588009A613D /* MessageNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448F71562AA91588009A613D /* MessageNode.swift */; };
 		448F71592AA977F7009A613D /* SKAction+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448F71582AA977F7009A613D /* SKAction+Extensions.swift */; };
+		4491CBB92ABE6FD30095D63F /* HintNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4491CBB82ABE6FD30095D63F /* HintNode.swift */; };
 		44B999992AA4CC7C002D5E77 /* CatCurl.sks in Resources */ = {isa = PBXBuildFile; fileRef = 44B999982AA4CC7C002D5E77 /* CatCurl.sks */; };
 		44B9999B2AA4D109002D5E77 /* CatWakeUp.sks in Resources */ = {isa = PBXBuildFile; fileRef = 44B9999A2AA4D109002D5E77 /* CatWakeUp.sks */; };
 		44CE79E12AB6620000FB87B1 /* Level3.sks in Resources */ = {isa = PBXBuildFile; fileRef = 44CE79E02AB6620000FB87B1 /* Level3.sks */; };
@@ -58,6 +59,7 @@
 		448F71542AA8B35F009A613D /* BlockNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockNode.swift; sourceTree = "<group>"; };
 		448F71562AA91588009A613D /* MessageNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageNode.swift; sourceTree = "<group>"; };
 		448F71582AA977F7009A613D /* SKAction+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKAction+Extensions.swift"; sourceTree = "<group>"; };
+		4491CBB82ABE6FD30095D63F /* HintNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintNode.swift; sourceTree = "<group>"; };
 		44B999982AA4CC7C002D5E77 /* CatCurl.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = CatCurl.sks; sourceTree = "<group>"; };
 		44B9999A2AA4D109002D5E77 /* CatWakeUp.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = CatWakeUp.sks; sourceTree = "<group>"; };
 		44CE79E02AB6620000FB87B1 /* Level3.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level3.sks; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				44CE79E22AB665DC00FB87B1 /* StoneNode.swift */,
 				444B897C2AB8EE8C00124F23 /* PictureNode.swift */,
 				444B89802AB9090A00124F23 /* DiscoBallNode.swift */,
+				4491CBB82ABE6FD30095D63F /* HintNode.swift */,
 			);
 			path = Nodes;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 			files = (
 				448F71592AA977F7009A613D /* SKAction+Extensions.swift in Sources */,
 				44EC3F2D2AA186F400E0B2E2 /* GameScene.swift in Sources */,
+				4491CBB92ABE6FD30095D63F /* HintNode.swift in Sources */,
 				44F4E5B42AA6B23100D0561F /* CatNode.swift in Sources */,
 				44F4E5B22AA6A9C000D0561F /* BedNode.swift in Sources */,
 				448F71532AA819DF009A613D /* SKTAudio.swift in Sources */,
