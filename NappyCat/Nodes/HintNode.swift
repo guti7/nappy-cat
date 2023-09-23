@@ -36,6 +36,19 @@ class HintNode: SKSpriteNode, EventListenerNode {
         shape.fillTexture = SKTexture(imageNamed: "wood_tinted")
         shape.alpha = 0.8
         
+        // Add a bouncing animation
+        let move = SKAction.moveBy(x: -40, y: 0, duration: 1.0)
+        let bounce = SKAction.sequence([
+            move,
+            move.reversed()
+        ])
+        let bounces = SKAction.repeat(bounce, count: 3)
+        
+        // Remove hint after bonce animation is complete
+        shape.run(bounces) {
+            self.removeFromParent()
+        }
+        
         addChild(shape)
     }
 }
