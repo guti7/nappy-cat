@@ -7,7 +7,9 @@
 
 import SpriteKit
 
-class HintNode: SKSpriteNode, EventListenerNode {
+class HintNode: SKSpriteNode, EventListenerNode, InteractiveNode {
+    
+    static var colors: [SKColor] = [.red, .yellow, .orange, .blue]
     
     /// The path for the arrow hint shape node
     var arrowPath: CGPath = {
@@ -27,6 +29,7 @@ class HintNode: SKSpriteNode, EventListenerNode {
     
     func didMoveToScene() {
         color = SKColor.clear
+        isUserInteractionEnabled = true
         
         // Create a shape node from arrow path
         let shape = SKShapeNode(path: arrowPath)
@@ -50,5 +53,15 @@ class HintNode: SKSpriteNode, EventListenerNode {
         }
         
         addChild(shape)
+    }
+    
+    func interact() {
+        let shape = children.first as! SKShapeNode
+        shape.fillColor = HintNode.colors.randomElement()!
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesEnded(touches, with: event)
+        interact()
     }
 }
